@@ -50,6 +50,13 @@ app.get('/about', (req,res)=>{
     });
 });
 
+app.get('/projects', (req,res)=>{
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        WelcomeMsg: 'Welcome to Node World!'
+    });
+});
+
 app.get('/bad',(req,res)=>{
     res.send({
         errormessage: 'Unable to handle the request' 
